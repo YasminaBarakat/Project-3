@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Survey Form</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+
+    <body>
+        <div class="container">
+            <h1 id="title"> Survey Form </h1>
+            <p id="description"> Thank you for taking the time to fill this survey </p>
+            <form id="survey-form">
+                <fieldset>
+                    <label for="name-label" id="name-label">Enter Your Name: 
+                        <input id="name" type="text" placeholder="Enter your name" required/>
+                    </label>
+
+                    <label for="email-label" id="email-label">Enter Your Email: 
+                        <input id="email" type="email" placeholder="Enter your email" required/>
+                    </label>
+
+                    <label for="number-label" id="number-label">Age (optional): 
+                        <input id="number" type="number" min="18" max="100" placeholder="Enter your age"> </input>
+                    </label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>How would you rate your overall satisfaction with the event?</legend>
+                    <label for="satisfaction" id="satisfaction">
+                        <div class="slider-container">
+                            <span> 1 </span>
+                            <input type="range" min="1" max="10" value="5" id="ratingSlider">
+                            <span> 10 </span>
+                        </div>
+                    </label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>How organized was the event?</legend>
+                    <label for="organized">
+                        <input id="organized" type="radio" name="organization-type" value="organized" class="inline" checked /> 
+                        Organized</label>
+                    <label for="notOrganized">
+                        <input id="notOrganized" type="radio" name="organization-type" value="notOrganized" class="inline" /> 
+                        Not Organized</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Did you find ample opportunities for networking at the event? </legend>
+                    <label for="yes">
+                        <input id="yes" type="radio" value="yes" name="networking" class="inline" checked /> 
+                    Yes</label>
+                    <label for="no">
+                        <input id="no" type="radio" value="no" name="networking" class="inline" /> 
+                    No</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>What aspects of the event do you think could be improved? </legend>
+                    <label for="aspects"></label>
+                    <label for="M"> 
+                        <input class="inline" id="aspects-to-change" type="checkbox" value="M" required name="aspects-to-change" /> M </label>
+                    <label for="N">
+                        <input class="inline" id="aspects-to-change" type="checkbox" value="N" required name="aspects-to-change" /> N </label>
+                    <label for="O">
+                        <input class="inline" id="aspects-to-change" type="checkbox" value="O" required name="aspects-to-change" /> O </label>
+                    <label for="P">
+                        <input class="inline" id="aspects-to-change" type="checkbox" value="P" required name="aspects-to-change" /> P </label>
+                </fieldset>
+                <fieldset>
+                    <label for="additional-comments">Additional Comments:
+                        <textarea id="additional-comments" name="additional-comments" rows="3" cols="30" placeholder="Enter comment here...."></textarea>
+                    </label>
+                    <label for="dropdown">How did you hear about us?
+                        <select id="dropdown" name="referrer">
+                            <option value="">(select one)</option>
+                            <option value="1">x</option>
+                            <option value="2">y</option>
+                            <option value="3">z</option>
+                            <option value="4">Other</option>
+                        </select>
+                    </label>
+                </fieldset>
+
+                <button type="submit" id="submit" value="Submit"> SUBMIT </button>
+            </form>
+        </div>
+
+    </body>
